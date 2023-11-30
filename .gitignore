@@ -1,1 +1,5 @@
 /target
+/bazel-bin
+/bazel-out/
+/bazel-protoc_plugin_scratch
+

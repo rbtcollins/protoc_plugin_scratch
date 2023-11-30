@@ -1,0 +1,12 @@
+load("@rules_rust//rust:defs.bzl", "rust_binary")
+
+rust_binary(
+    name = "hello_world",
+    srcs = ["src/main.rs"],
+    # deps = ["//hello_lib"],
+)
+
+# rust_library(
+#     name = "hello_lib",
+#     srcs = ["src/lib.rs"],
+# )

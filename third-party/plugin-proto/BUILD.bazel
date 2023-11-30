@@ -1,0 +1,14 @@
+# load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@rules_rust//proto/prost:defs.bzl", "rust_prost_library")
+
+# proto_library(
+#     name = "plugin_proto",
+#     srcs = ["@plugin_proto//file"],
+# )
+
+rust_prost_library(
+    name = "compiler_plugin_rust_proto",
+    proto = "@com_google_protobuf//:compiler_plugin_proto",
+    # crate = "@rules_proto//proto:compiler_plugin",
+)
+# compiler_plugin_proto
