@@ -96,6 +96,10 @@ rust_prost_transitive_repositories()
 
 register_toolchains("//toolchains:prost_toolchain")
 
+load("@rules_rust//tools/rust_analyzer:deps.bzl", "rust_analyzer_dependencies")
+
+rust_analyzer_dependencies()
+
 load("//third-party:deps.bzl", third_party_deps = "deps")
 
 third_party_deps()

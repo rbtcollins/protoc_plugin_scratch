@@ -7,8 +7,10 @@ load("@rules_rust//proto/prost:defs.bzl", "rust_prost_library")
 # )
 
 rust_prost_library(
-    name = "compiler_plugin_rust_proto",
+    name = "plugin_proto",  # This is the crate name see https://github.com/bazelbuild/rules_rust/issues/2294
+    # crate_name = "compiler_plugin_rust_proto",
     proto = "@com_google_protobuf//:compiler_plugin_proto",
     # crate = "@rules_proto//proto:compiler_plugin",
+    visibility = ["//:__pkg__"],
 )
 # compiler_plugin_proto
